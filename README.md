@@ -6,6 +6,12 @@ A full-stack conversational AI web application that allows users to interact wit
 
 Cognitia AI Assistant accepts a user question, sends it to the Groq AI model, displays the response in a clean user interface, and stores the question and answer in MongoDB Atlas.
 
+## 🌐 Live URLs
+
+- **Frontend:** https://my-cognitia-project-vjqv.vercel.app/
+- **Backend API:** https://my-cognitia-project.vercel.app
+- **GitHub Repo:** https://github.com/supriya9963/my-cognitia-project
+
 ## 🛠️ Tech Stack
 
 ### Frontend
