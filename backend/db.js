@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
 
+// MongoDB Atlas Connection Handler
+// Connects to cloud database using mongoose ODMconst mongoose = require('mongoose');
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
