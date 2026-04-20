@@ -1,17 +1,23 @@
 // Cognitia AI Assistant - Backend Server
 // Built with Express, Groq AI, and MongoDB Atlas
-require('dotenv').config();
 const express = require('express');
-const cors = require('cors');
 const Groq = require('groq-sdk');
 const connectDB = require('./db');
 const QA = require('./model');
 
 const app = express();
 
-app.use(cors());
-app.options('*', cors());
 app.use(express.json());
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+  next();
+});
 
 app.get('/', async (req, res) => {
   res.json({ message: 'Backend is running!' });
