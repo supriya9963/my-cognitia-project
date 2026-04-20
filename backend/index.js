@@ -9,11 +9,8 @@ const QA = require('./model');
 
 const app = express();
 
-app.use(cors({
-  origin: '*',
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type']
-}));
+app.use(cors());
+app.options('*', cors());
 app.use(express.json());
 
 app.get('/', async (req, res) => {
