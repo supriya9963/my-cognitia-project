@@ -1,3 +1,5 @@
+// Cognitia AI Assistant - Main React Component
+// Handles user input, API calls to backend, and displays AI responses
 import { useState } from 'react'
 import axios from 'axios'
 import './App.css'
