@@ -1,3 +1,5 @@
+// Cognitia AI Assistant - Backend Server
+// Built with Express, Groq AI, and MongoDB Atlas
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
